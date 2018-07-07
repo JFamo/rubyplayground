@@ -6,3 +6,7 @@
 <%= 20.times do |i| %>
 	<%= i %>
 <% end %>
+
+<%= "Message from controller: #{@controller_message}" %>
+
+<%= link_to("This is a thicc link",{:controller => 'welcome', :action => 'index', :comingfrom => 'sample'})%>
