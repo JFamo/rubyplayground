@@ -14,30 +14,20 @@
   <body>
   	<div class="container-fluid">
 
-  	<nav class="navbar navbar-expand-lg navbar-dark bg-danger" style="border-radius:5px;">
-	  <%= link_to 'Why I Hate Movies', {:controller => 'pages', :action => 'home'}, :class => 'navbar-brand' %>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarNav">
-	    <ul class="navbar-nav">
-	      <li class="nav-item">
-	        <%= link_to "Home", {:controller => 'pages', :action => 'home'}, :class => "nav-link" %>
-	      </li>
-	      <li class="nav-item">
-	        <%= link_to "Articles", {:controller => 'articles'}, :class => "nav-link" %>
-	      </li>
-	      <li class="nav-item">
-	        <%= link_to "Users", {:controller => 'users'}, :class => "nav-link" %>
-	      </li>
-	      <li class="nav-item">
-	        <%= link_to "About", {:controller => 'pages', :action => 'about'}, :class => "nav-link" %>
-	      </li>
-	    </ul>
-	  </div>
-	</nav>
+  	<div id="mySidenav" class="sidenav greenBack">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <%= link_to 'HerbDict', {:controller => 'pages', :action => 'home'}, :class => 'navbar-brand' %>
+	  <%= link_to "Articles", {:controller => 'articles'}, :class => "nav-link" %>
+	  <%= link_to "Users", {:controller => 'users'}, :class => "nav-link" %>
+	  <%= link_to "About", {:controller => 'pages', :action => 'about'}, :class => "nav-link" %>
+	</div>
 
+	<div id="main">
+
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
     <%= yield %>
+
+    </div>
 
     </div>
   </body>
